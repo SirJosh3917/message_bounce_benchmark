@@ -1,0 +1,16 @@
+.Dockerignore
+.gitignore
+Dockerfile
+README.md
+
+# copied from .gitignore
+_build
+cover
+deps
+doc
+.fetch
+erl_crash.dump
+*.ez
+distributed_factorial-*.tar
+tmp
+.elixir_ls

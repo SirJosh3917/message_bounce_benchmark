@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  worker1:
+    network_mode: host
+    build: .
+    environment:
+      NODE_NAME: worker1
+      # because elixir can't read into cgroup quotas very well,
+      # i've placed a limit in the erlang vm itself - check ./rel/vm.args
+      CPU_CORES_QUOTA: 1
+  worker2:
+    network_mode: host
+    build: .
+    environment:
+      NODE_NAME: worker2
+      CPU_CORES_QUOTA: 1
